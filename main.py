@@ -57,7 +57,7 @@ def simplex_iteration(A_nb, A_b, C_nb, C_b, b, problem_type):
     C_b[exitingVar], C_nb[enteringVar] = C_nb[enteringVar], C_b[exitingVar]
 
     # run new iteration
-    return simplex_iteration(A_nb, A_b, C_nb, C_b, Xb)
+    return simplex_iteration(A_nb, A_b, C_nb, C_b, Xb, problem_type)
 
 
 def simplex(C, A, b, problem_type):
@@ -81,9 +81,8 @@ while True:
         1. minimization
         2. maximization
     enter only number '1' or '2': """)
-    minmax = int(input())
-
-    if minmax != 1 or minmax != 2:
+    minmax = int(input().strip())
+    if minmax != 1 and minmax != 2:
         print("wrong format was entered!")
         continue
 
