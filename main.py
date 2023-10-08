@@ -64,7 +64,7 @@ def simplex_iteration(A_nb, A_b, C_nb, C_b, b, problem_type, basic_var_nums, non
         non_basic_var_nums[enteringVar], basic_var_nums[exitingVar]
 
     # run new iteration
-    return simplex_iteration(A_nb, A_b, C_nb, C_b, Xb, problem_type, basic_var_nums, non_basic_var_nums)
+    return simplex_iteration(A_nb, A_b, C_nb, C_b, b, problem_type, basic_var_nums, non_basic_var_nums)
 
 
 def simplex(C, A, b, problem_type):
